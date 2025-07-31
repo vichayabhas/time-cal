@@ -1,4 +1,3 @@
-import mongoose from "mongoose";
 import dayjs from "dayjs";
 import React from "react";
 
@@ -140,9 +139,6 @@ export const departures = [
 
 export function getDifferentMinute(start: Date, end: Date) {
   return dayjs(end).diff(start, "minute");
-}
-export function stringToId(input: string) {
-  return new mongoose.Types.ObjectId(input);
 }
 export function removeElementInUseStateArray<T>(input: T[]) {
   return input.filter((e, i, a) => i < a.length - 1);
